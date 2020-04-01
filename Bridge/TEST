@@ -1,0 +1,32 @@
+p1 = Bridges(
+    BILLING_DATE = datetime.date(2020,3,1),
+    POLICY_NUMBER = 57832,
+    CLIENT_NAME = "DFG-DEHONEY-FINANCIAL-GROUP",
+    LIFE_RATE = 1.54, 
+    LIFE_VOLUME = 203103,
+    EHC_S_RATE = 54.32,
+    EHC_S_VOLUME = 14,
+    EHC_C_RATE = 102.30,
+    EHC_C_VOLUME = 5,
+    EHC_F_RATE = 142.22,
+    EHC_F_VOLUME = 10
+)
+
+p1.save()
+
+p2 = Bridges(
+    BILLING_DATE = datetime.date(2020,3,1),
+    POLICY_NUMBER = 17832,
+    CLIENT_NAME = "JFG-JAY-FINANCIAL-GROUP",
+    LIFE_RATE = 1.52, 
+    LIFE_VOLUME = 201103,
+    EHC_S_RATE = 52.32,
+    EHC_S_VOLUME = 13,
+    EHC_C_RATE = 101.30,
+    EHC_C_VOLUME = 2,
+    EHC_F_RATE = 143.22,
+    EHC_F_VOLUME = 2
+)
+
+p2.save()
+

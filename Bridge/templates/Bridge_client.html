@@ -1,0 +1,80 @@
+{%extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<head>
+    <title> Dehoney Page</title>
+</head>
+<style>
+  .nav{
+    border-bottom: 1px solid black;
+  }
+
+  table, th, td {
+      border: 1px solid black;
+  }
+
+  table{
+      border-collapse: collapse;
+  }
+  th, td {
+      height: 25px;
+      text-align: center;
+  }    
+  .nav-item{
+      height: 22px ;
+  }
+ 
+</style>
+
+<body>
+
+<div class = "nav-item"><b>Billing Date: {{Client.BILLING_DATE}}</b></div>  
+<div class = "nav-item"><b>Client Name: {{Client.CLIENT_NAME}}</b></div>
+<div class= "nav">
+  <div class = "nav-item"><b>Policy Number: {{Client.POLICY_NUMBER}}</b> </div> 
+</div>
+
+    
+
+
+<table style = "width:100%">
+    <thead>
+        <tr> 
+            <th>Life_Rate</th>
+            <th>Life_Volume</th>
+            <th>Life_Premium</th>
+            <th>EHC_S_Rate</th>
+            <th>EHC_S_Volume</th>
+            <th>EHC_S_Premium</th>
+            <th>EHC_C_Rate</th>
+            <th>EHC_C_Volume</th>
+            <th>EHC_C_Premium</th>
+            <th>EHC_F_Rate</th>
+            <th>EHC_F_Volume</th>
+            <th>EHC_F_Premium</th>
+            <th>EHC_Total_Premium</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr>
+            <td> {{ Client.LIFE_RATE }} </td>
+            <td> {{ Client.LIFE_VOLUME }} </td>
+            <td> {{ Client.LIFE_PREMIUM }} </td>
+            <td> {{ Client.EHC_S_RATE }} </td>
+            <td> {{ Client.EHC_S_VOLUME }} </td>
+            <td> {{ Client.EHC_S_PREMIUM }} </td>
+            <td> {{ Client.EHC_C_RATE }} </td>
+            <td> {{ Client.EHC_C_VOLUME }} </td>
+            <td> {{ Client.EHC_C_PREMIUM }} </td>
+            <td> {{ Client.EHC_F_RATE }} </td>
+            <td> {{ Client.EHC_F_VOLUME }} </td>
+            <td> {{ Client.EHC_F_PREMIUM }} </td>
+            <td> {{ Client.EHC_TOTAL_PREMIUM }} </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+
+{% endblock%}

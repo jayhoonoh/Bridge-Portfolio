@@ -1,0 +1,57 @@
+{%extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<head>
+    <title> Dehoney Page</title>
+</head>
+<style>
+  .columns{
+    display: flex;
+  }
+
+  .column-item{
+    margin-right: 15px;
+  }
+  
+  .nav{
+    border-bottom: 1px solid black;
+  }
+  .nav-item{
+    height: 22px ;
+  }
+
+ 
+</style>
+
+<body>
+
+<div class = "client-info">
+<div class = "nav-item"> <b>Billing Date: </b></div>
+<div class = "nav-item"> <form method="POST" > {% csrf_token %} <b> Client Name: {{form1.Client_List}} </b> <button type="submit" name='f1'>Submit</button>  </form> </div> 
+<div class= "nav">
+<div class = "nav-item"> <div><b>Policy Number:</b></div> </div>
+<div class = "nav-item2"> <form method="POST" enctype="multipart/form-data"> {% csrf_token %} {{form2.my_csv_list}} <button type="submit" name='f2'>Import</button> </form> </div>
+<form method="POST"> {% csrf_token %} <button type="submit" name='f3'>Export All </button> </form>
+</div>
+
+
+<div class = "columns">
+  <div class= "column-item"> Life_Rate </div>
+  <div class= "column-item"> Life_Volume </div>
+  <div class= "column-item"> Life_Premium </div>
+  <div class= "column-item"> EHC_S_Rate </div>
+  <div class= "column-item"> EHC_S_Volume </div>
+  <div class= "column-item"> EHC_S_Premium </div>
+  <div class= "column-item"> EHC_C_Rate </div>
+  <div class= "column-item"> EHC_C_Volume </div>
+  <div class= "column-item"> EHC_C_Premium </div>
+  <div class= "column-item"> EHC_F_Rate </div>
+  <div class= "column-item"> EHC_F_Volume </div>
+  <div class= "column-item"> EHC_F_Premium </div>
+  <div class= "column-item"> EHC_Total_Premium </div>
+</div>
+
+</body>
+
+{% endblock%}
